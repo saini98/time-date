@@ -18,10 +18,10 @@ var date_time = function() {
     } else if (hrs >= 21) {
         document.getElementById("am_pm").innerHTML = "PM";
         document.getElementById("day").innerHTML = "Good Night";
-    } else if (hrs <= 12) {
+    } else if (hrs >= 5 && hrs <= 12) {
         document.getElementById("am_pm").innerHTML = "AM";
         document.getElementById("day").innerHTML = "Good Morning";
-    } else if (hrs <= 5) {
+    } else if (hrs <= 4) {
         document.getElementById("am_pm").innerHTML = "AM";
         document.getElementById("day").innerHTML = "Good Morning";
     }
