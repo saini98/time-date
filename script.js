@@ -9,16 +9,21 @@ var date_time = function() {
 
 
 
-    if (hrs >= 12 && hrs <= 16) {
+   if (hrs >= 12 && hrs <= 16) {
         document.getElementById("am_pm").innerHTML = "PM";
         document.getElementById("day").innerHTML = "Good Afternoon";
+    } else if (hrs >= 17 && hrs <= 20) {
+        document.getElementById("am_pm").innerHTML = "PM";
+        document.getElementById("day").innerHTML = "Good Evening";
+    } else if (hrs >= 21) {
+        document.getElementById("am_pm").innerHTML = "PM";
+        document.getElementById("day").innerHTML = "Good Night";
     } else if (hrs <= 12) {
         document.getElementById("am_pm").innerHTML = "AM";
         document.getElementById("day").innerHTML = "Good Morning";
-    } else if (hrs >= 17 && hrs <= 20) {
-        document.getElementById("day").innerHTML = "Good Evening";
-    } else if (hrs >= 21) {
-        document.getElementById("day").innerHTML = "Good Night";
+    } else if (hrs <= 5) {
+        document.getElementById("am_pm").innerHTML = "AM";
+        document.getElementById("day").innerHTML = "Good Morning";
     }
     hrs = hrs % 12;
 
